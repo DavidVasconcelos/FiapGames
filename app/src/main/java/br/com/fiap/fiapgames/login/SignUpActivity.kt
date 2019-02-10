@@ -45,7 +45,7 @@ class SignUpActivity : AppCompatActivity() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.56:8080")
+            .baseUrl("http://fiapjogos-api.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttp)
             .build()

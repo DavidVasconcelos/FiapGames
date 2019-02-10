@@ -1,5 +1,6 @@
 package br.com.fiap.fiapgames.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -7,8 +8,11 @@ import android.view.View
 import android.widget.Toast
 import br.com.fiap.fiapgames.R
 import br.com.fiap.fiapgames.api.JogoApi
+import br.com.fiap.fiapgames.home.HomeActivity
+import br.com.fiap.fiapgames.login.SignUpActivity
 import br.com.fiap.fiapgames.model.Jogo
 import br.com.fiap.fiapgames.model.ListaAdapter
+import br.com.fiap.fiapgames.register.RegisterActivity
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import kotlinx.android.synthetic.main.activity_list.*
 import okhttp3.OkHttpClient
@@ -24,9 +28,15 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
+        ibCadastrar.setOnClickListener {
+            startActivityForResult(Intent(this, RegisterActivity::class.java), 1)
+        }
+
+        ibHome.setOnClickListener {
+            startActivityForResult(Intent(this, HomeActivity::class.java), 1)
+        }
+
         list()
-
-
     }
 
 
@@ -36,7 +46,7 @@ class ListActivity : AppCompatActivity() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.56:8080")
+            .baseUrl("http://fiapjogos-api.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttp)
             .build()

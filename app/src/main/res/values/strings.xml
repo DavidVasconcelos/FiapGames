@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Fiap Games</string>
     <string name="header_games">Jogo</string>
@@ -7,5 +8,4 @@
     <string name="save">Salvar</string>
     <string name="devs">Desenvolvedores</string>
     <string name="version">Versão</string>
-
 </resources>
