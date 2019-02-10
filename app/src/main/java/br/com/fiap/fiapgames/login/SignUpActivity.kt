@@ -1,11 +1,13 @@
 package br.com.fiap.fiapgames.login
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import br.com.fiap.fiapgames.R
 import br.com.fiap.fiapgames.api.UserApi
 import br.com.fiap.fiapgames.extensions.getValue
+import br.com.fiap.fiapgames.home.HomeActivity
 import br.com.fiap.fiapmoney.model.Usuario
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -69,16 +71,13 @@ class SignUpActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Usuario>?, response: Response<Usuario>?) {
                 if (response?.isSuccessful == true) {
 
-                    val usuario = response.body()
+                    Toast.makeText(
+                        this@SignUpActivity,
+                        "Cadastro realizado com sucesso",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
-                    if (usuario != null) {
-                        Toast.makeText(
-                            this@SignUpActivity,
-                            "Pronto",
-                            Toast.LENGTH_LONG
-                        )
-                            .show()
-                    }
+                    startActivity(Intent(this@SignUpActivity, HomeActivity::class.java))
 
                 } else {
 
