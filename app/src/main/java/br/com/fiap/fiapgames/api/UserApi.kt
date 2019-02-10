@@ -13,5 +13,8 @@ interface UserApi {
     @POST("/user/login")
     fun login(@Body usuario: Usuario) : Call<Usuario>
 
+    @POST("/user")
+    fun create(@Body usuario: Usuario) : Call<Usuario>
+
 
 }

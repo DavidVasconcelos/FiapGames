@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="plataforms_array">
+        <item>Snes</item>
+        <item>Mega Drive</item>
+        <item>Playstation</item>
+        <item>Sega Saturn</item>
+        <item>Master System</item>
+        <item>Nes</item>
+    </string-array>
+</resources>

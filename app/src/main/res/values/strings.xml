@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Fiap Games</string>
+    <string name="header_games">Jogo</string>
+    <string name="hint_game">Ex.: Super Mario</string>
+    <string name="header_game_name">Nome do Jogo</string>
+    <string name="header_plataform_name">Plataforma</string>
+    <string name="save">Salvar</string>
+    <string name="devs">Desenvolvedores</string>
+    <string name="version">Versão</string>
+
 </resources>

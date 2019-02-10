@@ -12,18 +12,13 @@
             android:paddingLeft="24dp"
             android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/gamepad"
-                   android:layout_width="96dp"
-                   android:layout_height="96dp"
-                   android:layout_marginBottom="24dp"
-                   android:layout_gravity="center_horizontal"/>
 
         <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/inputLoginEmail"
+            <EditText android:id="@+id/inputEmail"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textEmailAddress"
@@ -35,36 +30,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/inputLoginPassword"
+            <EditText android:id="@+id/inputPassword"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textPassword"
                       android:hint="Password"/>
         </android.support.design.widget.TextInputLayout>
 
-        <CheckBox
-                android:text="Manter Conectado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/cbManterConectado"/>
-
         <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btLogin"
+                android:id="@+id/btCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:padding="12dp"
-                android:text="Login"/>
-
-
-        <TextView android:id="@+id/btSignup"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginBottom="24dp"
-                  android:text="Ainda não tem conta? Crie uma"
-                  android:gravity="center"
-                  android:textSize="16dip"/>
+                android:text="Create an account"/>
 
     </LinearLayout>
 </ScrollView>

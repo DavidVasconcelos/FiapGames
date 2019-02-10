@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+            style="@style/container_master">
+
+        <ImageView
+                style="@style/banner"/>
+
+        <View style="@style/divider"/>
+
+        <TextView
+                style="@style/header_title"
+                android:drawableStart="@drawable/controller"
+                android:text="@string/header_games"/>
+
+        <View style="@style/divider"/>
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                    android:text="@string/header_game_name"
+                    style="@style/header_subtitle"/>
+
+            <TextView
+
+                    android:text="@string/header_plataform_name"
+                    style="@style/header_subtitle"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/container_row">
+
+            <EditText
+                    android:hint="@string/hint_game"
+                    android:nextFocusDown="@+id/spPlataforms"
+                    style="@style/input_text" android:id="@+id/etGame"/>
+
+            <Spinner
+                    android:id="@+id/spPlataforms"
+                    style="@style/spinner"
+                    android:entries="@array/plataforms_array"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View style="@style/divider"/>
+
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/btSave"/>
+
+        <View style="@style/divider"/>
+    </LinearLayout>
+</ScrollView>

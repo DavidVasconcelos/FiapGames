@@ -12,6 +12,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".about.AboutActivity">
+        </activity>
+        <activity android:name=".list.ListActivity">
+        </activity>
+        <activity android:name=".register.RegisterActivity">
+        </activity>
+        <activity android:name=".home.HomeActivity">
+        </activity>
+        <activity android:name=".login.SignUpActivity">
+        </activity>
         <activity android:name="br.com.fiap.fiapmoney.login.LoginActivity">
         </activity>
         <activity
